@@ -1,0 +1,25 @@
+- Create a grocery store database
+
+CREATE TABLE clothing (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, aisle INTEGER, price INTEGER);
+
+INSERT INTO clothing VALUES (1, "shirts", 20, 2, 15);
+INSERT INTO clothing VALUES (2, "pants", 18, 2, 17);
+INSERT INTO clothing VALUES (3, "socks", 20, 1, 5);
+INSERT INTO clothing VALUES (4, "underwear", 20, 1, 7);
+INSERT INTO clothing VALUES (5, "shorts", 17, 2, 15);
+INSERT INTO clothing VALUES (6, "bras", 15, 1, 10);
+INSERT INTO clothing VALUES (7, "jackets", 6, 3, 25);
+INSERT INTO clothing VALUES (8, "hats", 10, 1, 12);
+INSERT INTO clothing VALUES (9, "scarves", 10, 1, 5);
+INSERT INTO clothing VALUES (10, "tube socks", 15, 1, 7);
+INSERT INTO clothing VALUES (11, "kids shirts", 10, 4, 10);
+INSERT INTO clothing VALUES (12, "kids pants", 12, 4, 12);
+INSERT INTO clothing VALUES (13, "kids socks", 18, 4, 5);
+INSERT INTO clothing VALUES (14, "kids underwear", 18, 4, 5);
+INSERT INTO clothing VALUES (15, "beanies", 10, 1, 10);
+
+- Display items with a quantity greater than 10 and order by price.
+SELECT * FROM clothing WHERE quantity > 10 ORDER BY price;
+
+- Display the amount of items per aisle.
+SELECT aisle, SUM(quantity) FROM clothing Group by aisle;
